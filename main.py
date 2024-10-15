@@ -8,6 +8,9 @@ import datetime
 app = Flask(__name__)
 CORS(app)
 
+# Enable CORS for all origins
+CORS(app, resources={r"/*": {"origins": "*"}})
+
 # Initialize models
 GROQ_API_KEY = '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'
 chat = ChatGroq(
