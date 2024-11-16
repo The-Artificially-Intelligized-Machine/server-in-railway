@@ -50,6 +50,10 @@ Ext_todo = f"""
         If tasks are found, return JSON or in every other case, return None.
 """
 
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
+
 # Route to handle requests from the frontend
 @app.route('/endpoint', methods=['POST'])
 def handle_request():
